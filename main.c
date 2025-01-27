@@ -20,7 +20,7 @@ int* Dynamic2D(int* size) {
             capacity *= 2;
             p = (int*)realloc(p, capacity * sizeof(int));
             if (p == NULL) {
-                printf("Memory allocation error\n");
+                printf("Memory allocation ERROR\n");
                 exit(EXIT_FAILURE);
             }
         }
