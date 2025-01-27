@@ -1,15 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(void) {
-    int *a = (int*)malloc(10 * sizeof(int));
-    int n;
-    for (n = 1; n <= 10; n++) {
-        *(a +n) = n;
+    char buffer[100];
+    char *str = NULL;
+
+    printf("Enter string: ");
+    gets(buffer);
+    str = strdup(buffer);
+    if (str == NULL) {
+        printf("Memory allocation failed\n");
     }
-    for (n = 1; n <= 10; n++) {
-        printf("%d ", *(a + n));
+    else {
+        printf("Memory allocated successfully\n");
+        printf("%s\n", str);
     }
-    free(a);
+    free(str);
     return 0;
 }
