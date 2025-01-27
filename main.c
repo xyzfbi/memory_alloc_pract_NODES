@@ -1,21 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+int* Dynamic2D(int n) {
+    int *p = (int*)malloc(5 * sizeof(int));
+    printf("Enter elemnts:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &p[i]);
+    }
 
+    return p;
+}
 int main(void) {
-    char buffer[100];
-    char *str = NULL;
+    int *p = NULL;
+    p = Dynamic2D (5);
+    for (int i = 0; i < 5; i++) {
+        printf("p[%d] = %d\n", i, p[i]);
+    }
+    free(p);
 
-    printf("Enter string: ");
-    gets(buffer);
-    str = strdup(buffer);
-    if (str == NULL) {
-        printf("Memory allocation failed\n");
+    if (p == NULL) {
+        printf("p is NULL\n");
+        exit(1);
     }
     else {
-        printf("Memory allocated successfully\n");
-        printf("%s\n", str);
+        printf("p is valid\n");
     }
-    free(str);
     return 0;
 }
