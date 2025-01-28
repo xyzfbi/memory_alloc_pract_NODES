@@ -5,11 +5,11 @@ int* Dynamic2D(int* size) {
     int capacity = 5;
     int *p = (int*)malloc(sizeof(int) * capacity);
     if (p == NULL) {
-        printf("Memory allocation error\n");
+        printf("NIGGA");
         exit(EXIT_FAILURE);
     }
 
-    printf("Enter elements (0 to stop):\n");
+    printf("NIGGA");
     while (1) {
         int num;
         scanf("%d", &num);
@@ -20,7 +20,7 @@ int* Dynamic2D(int* size) {
             capacity *= 2;
             p = (int*)realloc(p, capacity * sizeof(int));
             if (p == NULL) {
-                printf("Memory allocation ERROR\n");
+                printf("NIGGA\n");
                 exit(EXIT_FAILURE);
             }
         }
